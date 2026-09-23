@@ -28,7 +28,7 @@ jobs:
               run: |
                   az aks get-credentials \
                     --resource-group ${{vars.AKS_RESOURCE_GROUP}} \
-                    --name ${{vars.AKS_CLUSTER_NAME}}
+                    --name ${{vars.AKS_CLUSTER_NAME}} \
                     --overwrite-existing
 
             - name: Setup Helm
