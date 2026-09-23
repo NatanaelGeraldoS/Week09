@@ -165,8 +165,8 @@ jobs:
         id: docker-Scout
         uses: docker/scout-action@v1
         with:
-          docker-user: ${{ secrets.DOCKERHUB_USERNAME}}
-          docker-password: ${{ secrets.DOCKERHUB_TOKEN}}
+          dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME}}
+          dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN}}
           command: cves
           image: ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:${{ github.sha }}
           only-severities: critical,high
